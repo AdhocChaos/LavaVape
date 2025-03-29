@@ -49,6 +49,10 @@
             color: white;
             border: none;
             padding: 10px;
+            transition: left 0.3s;
+        }
+        .menu-btn.open {
+            left: 260px;
         }
         .slideshow-container {
             position: relative;
@@ -67,11 +71,11 @@
 </head>
 <body>
     <div class="header">Lava Vape</div>
-    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰ Menu</button>
     <div class="sidebar" id="sidebar">
-        <a href="disposables.html">Disposables</a>
-        <a href="saltnic.html">Salt Nicotine Juice</a>
-        <a href="freebase.html">Freebase Juice</a>
+        <a href="#">Placeholder 1</a>
+        <a href="#">Placeholder 2</a>
+        <a href="#">Placeholder 3</a>
     </div>
     
     <div class="slideshow-container">
@@ -83,10 +87,13 @@
     <script>
         function toggleMenu() {
             let sidebar = document.getElementById("sidebar");
+            let menuBtn = document.getElementById("menuBtn");
             if (sidebar.style.left === "0px") {
                 sidebar.style.left = "-250px";
+                menuBtn.classList.remove("open");
             } else {
                 sidebar.style.left = "0px";
+                menuBtn.classList.add("open");
             }
         }
         
