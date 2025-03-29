@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lava Vape</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1102438200208789516/1355655802559664238/favicon.ico?ex=67e9b85a&is=67e866da&hm=0cbb4a77aeeab4ceb40d2c99f321b02e4889871e6a00b40bcd6a670bf3d640cb&" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -92,6 +93,30 @@
         .next {
             right: 10px;
         }
+
+        .bslong {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            height: 7vh;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 5vh;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -115,8 +140,25 @@
         <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355632113453633536/locations.png?ex=67e9a24a&is=67e850ca&hm=7ff53bed6c7f0893ced7bffbaec4a7c032a71a365b4b9637b9a8cb4581b367c8&=&format=webp&quality=lossless" alt="Our two store locations">
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-    
 
+    <div class="bslong">
+        <div class="bs1">
+            <aside> Contact us <br> Kuna (986)837-6885 <br> Vista (208)906-6549</aside>
+        </div>
+        <div class="bs2">
+            <aside>
+                <p font-weight: bold>Customer Service</p> <br>
+                <a href="exchange.html">Exchange Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="toc">Terms & Conditions</a>
+            </aside>
+        </div>
+        <div class="footer">
+            <p>
+                Copyright © 2025 | Lava Vape - Best Vape Shop in Boise
+            </p>
+        </div>
+    </div>
     <script>
         function toggleMenu() {
             let sidebar = document.getElementById("sidebar");
