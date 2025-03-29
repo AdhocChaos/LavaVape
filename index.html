@@ -21,6 +21,10 @@
             height: 7vh;
             width: 100%;
         }
+        .header-img {
+            width: 20vw;
+        }
+        
         .sidebar {
             position: fixed;
             left: -250px;
@@ -58,7 +62,7 @@
         }
         .slideshow-container {
             position: relative;
-            max-width: 100%;
+            max-width: 60vw;
             margin: auto;
             overflow: hidden;
         }
@@ -72,7 +76,8 @@
     </style>
 </head>
 <body>
-    <img class="header" src="https://media.discordapp.net/attachments/1102438200208789516/1355620009048539196/LavaVape.png?ex=67e99704&is=67e84584&hm=b7cc1270a3f3f9104263c63102efa1508788027fa477ec8dbc0c91e85ce6f035&=&format=webp&quality=lossless&width=1768&height=342">
+    <div class="header">
+        <img class="header-img" src="https://media.discordapp.net/attachments/1102438200208789516/1355620009048539196/LavaVape.png?ex=67e99704&is=67e84584&hm=b7cc1270a3f3f9104263c63102efa1508788027fa477ec8dbc0c91e85ce6f035&=&format=webp&quality=lossless&width=1768&height=342">
     <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰ Menu</button>
     <div class="sidebar" id="sidebar">
         <a href="index.html">Home</a>
