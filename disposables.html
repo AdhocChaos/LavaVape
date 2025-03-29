@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disposables</title>
+    <style>
+                .header {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            height: 7vh;
+            width: 100%;
+        }
+        .header-img {
+            width: 20vw;
+        }
+        
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            padding-top: 60px;
+            transition: 0.3s;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #575757;
+        }
+        .menu-btn {
+            position: fixed;
+            left: 10px;
+            top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px;
+            transition: left 0.3s;
+        }
+        .menu-btn.open {
+            left: 260px;
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="header">
+        <img class="header-img" src="https://media.discordapp.net/attachments/1102438200208789516/1355620009048539196/LavaVape.png?ex=67e99704&is=67e84584&hm=b7cc1270a3f3f9104263c63102efa1508788027fa477ec8dbc0c91e85ce6f035&=&format=webp&quality=lossless&width=1768&height=342">
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰ Menu</button>
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="disposables.html">Disposables</a>
+        <a href="freebase.html">E-Juice</a>
+        <a href="saltnic.html">Salt Nicotine Juice</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </div>
+        
     <div class="container mt-5">
         <h1 class="text-center mb-4">Our Disposable Vape Brands</h1>
         <div class="row">
@@ -89,6 +152,22 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">    </script>
+
+    <script>
+        function toggleMenu() {
+            let sidebar = document.getElementById("sidebar");
+            let menuBtn = document.getElementById("menuBtn");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+                menuBtn.classList.remove("open");
+            } else {
+                sidebar.style.left = "0px";
+                menuBtn.classList.add("open");
+            }
+        }
+        
+
+    </script>
 </body>
 </html>
