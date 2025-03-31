@@ -38,7 +38,6 @@
         
         .sidebar {
             position: fixed;
-            left: -250px;
             top: 0;
             width: 250px;
             height: 100%;
@@ -76,11 +75,9 @@
         }
         
         .slideshow-container {
-            position: fixed;
-            max-width: 60vw;
+            position: relative;
             margin: auto;
             overflow: hidden;
-            top: 10vh;
         }
         
         .slides {
@@ -141,7 +138,6 @@
         @media screen and (min-width: 0em) {
             .middle {
                 grid-template-areas:
-                "menu-btn"
                 "slideshow-container"
                 "slideshow-container"
                 "slideshow-container"
@@ -154,21 +150,22 @@
         @media screen and (min-width: 38em) {
             .middle {
                 grid-template-areas:
-                "menu-btn slideshow-container"
-                "sidebar slideshow-container"
-                "sidebar slideshow-container"
+                "slideshow-container slideshow-container"
+                "slideshow-container slideshow-container"
+                "slideshow-container slideshow-container"
                 "bs1 bs2"
-                "footer";
+                "footer footer";
             }
         }
 
         @media screen and (min-width: 54em) {
             .middle {
                 grid-template-areas:
-                "menu-btn slideshow-container slideshow-container"
-                "sidebar slideshow-container slideshow-container"
-                "sidebar slideshow-container slideshow-container "
-                "bs 1 bs2"
+                "slideshow-container slideshow-container slideshow-container"
+                "slideshow-container slideshow-container slideshow-container"
+                "slideshow-container slideshow-container slideshow-container"
+                "slideshow-container slideshow-container slideshow-container"
+                "bs1 bs2 bs3"
                 "footer footer footer"
 
             }
@@ -179,8 +176,9 @@
                 grid-template-areas:
                 "menu-btn slideshow-container slideshow-container"
                 "sidebar slideshow-container slideshow-container"
-                "sidebar slideshow-container slideshow-container "
-                "bs 1 bs2"
+                "sidebar slideshow-container slideshow-container"
+                "sidebar slideshow-container slideshow-container"
+                "bs1 bs2 bs3"
                 "footer footer footer"
 
         }
@@ -225,6 +223,9 @@
                     <a href="exchange.html">Exchange Policy</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="toc">Terms & Conditions</a>
+            </aside>
+            <aside class="bs3">
+                <p> Testing purposes</p>
             </aside>
         </div>
         <div class="footer">
