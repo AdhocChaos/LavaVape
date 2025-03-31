@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lava Vape</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1102438200208789516/1355655802559664238/favicon.ico?ex=67e9b85a&is=67e866da&hm=0cbb4a77aeeab4ceb40d2c99f321b02e4889871e6a00b40bcd6a670bf3d640cb&" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            height: 7vh;
+            width: 100%;
+        }
+        .header-img {
+            width: 20vw;
+        }
+        
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            padding-top: 60px;
+            transition: 0.3s;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #575757;
+        }
+        .menu-btn {
+            position: fixed;
+            left: 10px;
+            top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px;
+            transition: left 0.3s;
+        }
+        .menu-btn.open {
+            left: 260px;
+        }
+        .slideshow-container {
+            position: fixed;
+            max-width: 60vw;
+            margin: auto;
+            overflow: hidden;
+            top: 10vh;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .active {
+            display: block;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+
+        .bslong {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            height: 7vh;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 5vh;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+      
+
+        @media screen and (min-width: 0em) {
+            .middle {
+                grid-template-areas:
+                "L middler"
+                "L middler"
+                "L middler"
+                "L middler"
+                "b1r b1r"
+                "b2r b2r";
+            }
+        }
+
+        @media screen and (min-width: 38em) {
+            .middle {
+                grid-template-areas:
+                "L L middler middler"
+                "L L middler middler"
+                "L L middler middler"
+                "b1r b1r b2r b2r"
+                "b1r b1r b2r b2r";
+            }
+        }
+
+        @media screen and (min-width: 54em) {
+            .middle {
+                grid-template-areas:
+                "L middler middler middler b1r"
+                "L middler middler middler b1r"
+                "L middler middler middler b2r"
+                "L middler middler middler b2r"
+
+            }
+        }
+
+        @media screen and (min-width: 75em) {
+            .middle {
+                grid-template-areas:
+                "L middler middler middler b1r"
+                "L middler middler middler b1r"
+                "L middler middler middler b2r"
+                "L middler middler middler b2r"
+
+        }
+            }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="header-img" src="https://media.discordapp.net/attachments/1102438200208789516/1355629595289718824/LavaVape.png?ex=67eb9a31&is=67ea48b1&hm=a1d17c16933ae7effe6efabcc2163d9ddc0b3eab3ceb175d76df1dbbbf09756b&=&format=webp&quality=lossless&width=928&height=180">
+    </div>
+    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰ Menu</button>
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="disposables.html">Disposables</a>
+        <a href="freebase.html">E-Juice</a>
+        <a href="saltnic.html">Salt Nicotine Juice</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="test.html">Test Page</a>
+        <a href="test2.html">Test Page</a>
+
+    </div>
+    
+    <div class="slideshow-container">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img class="slides active" src="https://media.discordapp.net/attachments/1102438200208789516/1355627800844828833/forgernew.png?ex=67e99e46&is=67e84cc6&hm=99c5a4d0debeeb889ffe873504726e81adba0e636abb9ff79fa8fb0478cd8b71&=&format=webp&quality=lossless" alt="New Foger Vapes">
+        <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355629594182553872/custom.png?ex=67e99ff1&is=67e84e71&hm=847a7929cc8454f28686f2a54c91ed4dcef9ff831dd53c390bfb7abe49495b69&=&format=webp&quality=lossless" alt="Custom requests">
+        <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355632113453633536/locations.png?ex=67e9a24a&is=67e850ca&hm=7ff53bed6c7f0893ced7bffbaec4a7c032a71a365b4b9637b9a8cb4581b367c8&=&format=webp&quality=lossless" alt="Our two store locations">
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="bslong">
+        <aside class="bs1">
+            <p font-weight: bold>Contact Us</p> <br>
+            <p> Kuna (986)837-6885 </p>
+            <p> Vista (208)906-6549 </p>
+        </aside>
+        <aside class="bs2">
+                <p font-weight: bold>Customer Service</p> <br>
+                <a href="exchange.html">Exchange Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="toc">Terms & Conditions</a>
+        </aside>
+    </div>
+    <div class="footer">
+            <p>
+                Copyright © 2025 | Lava Vape - Best Vape Shop in Boise
+            </p>
+    </div>
+    <script>
+        function toggleMenu() {
+            let sidebar = document.getElementById("sidebar");
+            let menuBtn = document.getElementById("menuBtn");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+                menuBtn.classList.remove("open");
+            } else {
+                sidebar.style.left = "0px";
+                menuBtn.classList.add("open");
+            }
+        }
+        
+        let index = 0;
+        function changeSlide(direction) {
+            let slides = document.getElementsByClassName("slides");
+            slides[index].classList.remove("active");
+            index = (index + direction + slides.length) % slides.length;
+            slides[index].classList.add("active");
+        }
+    </script>
+</body>
+</html>
