@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lava Vape</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1102438200208789516/1355655802559664238/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+        }
+        .header-img {
+            width: 100%;
+            max-width: 300px;
+        }
+        .sidebar {
+            background: #333;
+            color: white;
+            padding: 20px;
+            display: block;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #575757;
+        }
+        .menu-btn {
+            font-size: 20px;
+            cursor: pointer;
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px;
+            display: block;
+            margin: 10px;
+        }
+        .slideshow-container {
+            width: 100%;
+            text-align: center;
+            display: block;
+            padding: 20px 0;
+        }
+        .slides {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+        }
+        .bslong {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+        }
+        .footer {
+            background-color: #f00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="header-img" src="https://media.discordapp.net/attachments/1102438200208789516/1355629595289718824/LavaVape.png">
+    </div>
+    <button class="menu-btn" id="menuBtn">☰ Menu</button>
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="disposables.html">Disposables</a>
+        <a href="freebase.html">E-Juice</a>
+        <a href="saltnic.html">Salt Nicotine Juice</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </div>
+    <div class="slideshow-container">
+        <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355627800844828833/forgernew.png" alt="New Foger Vapes">
+        <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355629594182553872/custom.png" alt="Custom requests">
+        <img class="slides" src="https://media.discordapp.net/attachments/1102438200208789516/1355632113453633536/locations.png" alt="Our two store locations">
+    </div>
+    <div class="bslong">
+        <aside> Contact us <br> Kuna (986)837-6885 <br> Vista (208)906-6549</aside>
+        <aside>
+            <p><strong>Customer Service</strong></p>
+            <a href="exchange.html">Exchange Policy</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="toc">Terms & Conditions</a>
+        </aside>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2025 | Lava Vape - Best Vape Shop in Boise</p>
+    </div>
+  <script>
+      function toggleMenu() {
+          let sidebar = document.getElementById("sidebar");
+          let menuBtn = document.getElementById("menuBtn");
+          if (sidebar.style.left === "0px") {
+              sidebar.style.left = "-250px";
+              menuBtn.classList.remove("open");
+          } else {
+              sidebar.style.left = "0px";
+              menuBtn.classList.add("open");
+          }
+      }
+      
+      let index = 0;
+      function changeSlide(direction) {
+          let slides = document.getElementsByClassName("slides");
+          slides[index].classList.remove("active");
+          index = (index + direction + slides.length) % slides.length;
+          slides[index].classList.add("active");
+      }
+  </script>
+</body>
+</html>
